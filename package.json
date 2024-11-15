@@ -19,7 +19,8 @@
   "homepage": "https://github.com/EmekaManuel/soon-onchain-analysis.git#readme",
   "dependencies": {
     "@project-serum/anchor": "^0.26.0",
-    "@solana/web3.js": "^1.93.1",
+    "@solana/spl-token": "^0.4.9",
+    "@solana/web3.js": "^1.95.4",
     "@types/gradient-string": "^1.1.6",
     "@types/node": "^20.14.8",
     "axios": "^1.7.2",

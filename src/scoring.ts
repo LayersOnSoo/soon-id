@@ -3,24 +3,29 @@ import {
   getTransactionHistory,
   getTokenBalances,
   getAccountInfo,
+  getNFTs,
+  connection,
 } from "./solana";
 import { ScoreCriteria, WalletScore } from "./types";
 
 // Define multipliers for different score criteria
 const SCORE_MULTIPLIERS = {
-  transactionCount: 0.5,
-  tokenBalance: 0.3,
-  smartContractInteractions: 0.1,
+  transactionCount: 0.4,
+  tokenBalance: 0.2,
+  smartContractInteractions: 0.2,
   stakingActivities: 0.1,
+  nftCount: 0.1,
 };
 
 const analyzeWallet = async (publicKey: PublicKey): Promise<ScoreCriteria> => {
   const transactions = await getTransactionHistory(publicKey);
   const tokenBalances = await getTokenBalances(publicKey);
   const accountInfo = await getAccountInfo(publicKey);
+  const nfts = await getNFTs(publicKey, connection);
 
   const transactionCount = transactions.length;
   const tokenBalance = tokenBalances.value.length;
+  const nftCount = nfts.length;
   const smartContractInteractions = transactions.filter(
     (tx) => tx.err === null
   ).length;
@@ -31,9 +36,11 @@ const analyzeWallet = async (publicKey: PublicKey): Promise<ScoreCriteria> => {
     `\n------------------------------------------------------------------------------------------------------------------\n`
   );
   console.log(`\nWallet Address: ${publicKey.toString()}`);
-  console.log(`\nTransaction Count: ${transactionCount}`);
-  console.log(`\nSmart Contract Interactions: ${smartContractInteractions}`);
-  console.log(`\nStaking Activities: ${stakingActivities}`);
+  console.log(`Transaction Count: ${transactionCount}`);
+  console.log(`Token Balance: ${tokenBalance}`);
+  console.log(`NFT Count: ${nftCount}`);
+  console.log(`Smart Contract Interactions: ${smartContractInteractions}`);
+  console.log(`Staking Activities: ${stakingActivities}`);
 
   return {
     transactionCount,
