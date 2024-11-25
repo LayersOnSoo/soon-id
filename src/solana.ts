@@ -3,7 +3,7 @@ import { Connection, PublicKey } from "@solana/web3.js";
 
 // Create a connection to the SOON DEVNET cluster
 export const connection = new Connection(
-  "https://rpc.devnet.soo.network/rpc", // soo.network RPC endpoint
+  "https://rpc.testnet.soo.network/rpc", // soo.network RPC endpoint
   "confirmed" // Commitment level
 );
 
