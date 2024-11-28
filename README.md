@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This module analyzes the on-chain footprint of Solana wallet accounts to derive a credibility score based on various criteria such as transaction history, token balances, smart contract interactions, and staking activities.
+This module analyzes the on-chain footprint of wallet accounts on the SooNetwork to derive a credibility score based on various criteria such as transaction history, token balances, smart contract interactions, and staking activities.
 
 ## Demo
 
