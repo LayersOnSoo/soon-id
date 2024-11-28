@@ -10,7 +10,7 @@ These screenshots demonstrate the module in action, showcasing both the analysis
 
 ## Setup
 
-1. Clone the repository: `git clone https://github.com/EmekaManuel/soon-onchain-analysis.git](https://github.com/LayersOnSoo/soon-id.git`
+1. Clone the repository: `git clone [https://github.com/LayersOnSoo/soon-id.git]`
 2. cd `<repository-directory>`
 3. Install dependencies: `npm install`
 4. Run the project: `npm start`
