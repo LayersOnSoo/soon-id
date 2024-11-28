@@ -7,6 +7,8 @@ This module analyzes the on-chain footprint of wallet accounts on the SooNetwork
 ## Demo
 
 These screenshots demonstrate the module in action, showcasing both the analysis of multiple wallet addresses and a single wallet address.
+![Multiple Wallet Demo Screenshot](./public/multiple-wallets-demo.png)
+![Single Wallet Demo Screenshot](./public/single-wallets-demo.png)
 
 ## Setup
 

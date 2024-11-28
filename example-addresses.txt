@@ -1,3 +1,5 @@
+// These must be active TESTNET addresses with onchain footprints. 
+
 52HhJUmHVR2LmQ7xz7ps8bKq8xdQwd8udNDxt6tukk5c
 
 7qhC7bD9cDV9LTwjgVmGJHs5rGtrMY4pSBw1KswuaBfk
